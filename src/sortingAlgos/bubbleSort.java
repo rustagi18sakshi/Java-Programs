@@ -30,23 +30,22 @@ public class bubbleSort {
 			System.out.print(sortedArray[j]+" ");
 		}	
 	}
-//In bubble sort, maximum number is sorted first in the array at the end of the list
+// In bubble sort, maximum number is sorted first in the array at the end of the list
 	public static int[] bubbleSort(int arr[])
 	{
-		int length = arr.length;
-		for(int i=0;i<length;i++)
+		int n = arr.length;
+		for(int i=0;i<n-1;i++)
 		{
-			for(int j=1;j<length-i;j++)
+			for(int j=0;j<n-i-1;j++)
 			{
-				if(arr[j-1]>arr[j])
+				if(arr[j]>arr[j+1])
 				{
-					int temp = arr[j-1];
-					arr[j-1] = arr[j];
-					arr[j] = temp;
+					int temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
 				}
 			}
 		}
 		return arr;
 	}
-
 }

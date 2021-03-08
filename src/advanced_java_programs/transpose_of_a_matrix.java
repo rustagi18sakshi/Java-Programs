@@ -45,5 +45,4 @@ public class transpose_of_a_matrix {
 			System.out.println();
 		}
 	}
-
 }

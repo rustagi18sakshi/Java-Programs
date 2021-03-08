@@ -3,7 +3,7 @@ package string_java_programs;
 import java.util.Scanner;
 /*
 For reference : https://www.javatpoint.com/java-program-to-divide-a-string-in-n-equal-parts
- */
+*/
 
 public class divideStringInNEqualParts {
 

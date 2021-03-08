@@ -41,7 +41,7 @@ public class insertionSort {
 			
 			while(j>=0 && arr[j]>key)
 			{
-				arr[j+1] = arr[j];
+				arr[j+1] = arr[j]; // Right rotation of element
 				j = j-1;
 			}
 			arr[j+1] = key;

@@ -3,14 +3,19 @@ package sortingAlgos;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class binarySearchWithRecursion {
+/*
+Link to refer : https://www.java67.com/2016/05/java-program-to-perform-binary-search-without-recursion.html
+The time complexity of binary search is in order of O(logN) if you get the sorted input. 
+If you have to sort the input then you need to add that time on the total run time of the algorithm as well.
+*/
+public class binarySearchWithoutRecursion {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the number of elements you want in an array :");
 		int num = sc.nextInt();
-				
+		
 		int arr[] = new int[num];
 		System.out.println("Enter the elements of an array in a sorted order :");
 		for(int i=0;i<num;i++)
@@ -18,11 +23,12 @@ public class binarySearchWithRecursion {
 			arr[i] = sc.nextInt();
 		}
 		//back up if user doesn't enter sorted array
-		Arrays.sort(arr);	
+		Arrays.sort(arr);
+		
 		System.out.println("Enter the number you want to search in an array :");
 		int number = sc.nextInt();
-				
-		int index = binarySearch(arr, number,0, arr.length);
+		
+		int index = binarySearch(arr, number);
 		if(index == -1)
 		{
 			System.out.println("Number "+number+" doesn't exists in an array");
@@ -32,10 +38,16 @@ public class binarySearchWithRecursion {
 			System.out.println("Number "+number+" exists at index : "+index);
 		}
 	}
-
-	public static int binarySearch(int[] arr, int number,int low, int high)
+/*
+Java method to perform binary search. It accept an integer array and a number and return the index of 
+number in the array. If number doesn't exists in array then it return -1
+*/
+	public static int binarySearch(int[] arr, int number)
 	{
-		if(high>=low)
+		int low = 0;
+		int high = arr.length-1;
+
+		while(high>=low)
 		{
 			int middle = (low+high)/2;
 			if(arr[middle] == number)
@@ -44,15 +56,13 @@ public class binarySearchWithRecursion {
 			}
 			else if(arr[middle] < number)
 			{
-				return binarySearch(arr, number, middle+1, high);
+				low = middle+1;
 			}
-			else if(arr[middle]>number)
+			else if(arr[middle] > number)
 			{
-				return binarySearch(arr, number, low, middle-1);
+				high = middle-1;
 			}
 		}
 		return -1;
 	}
-
-
 }
