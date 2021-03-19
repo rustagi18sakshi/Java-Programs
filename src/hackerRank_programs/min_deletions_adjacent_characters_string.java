@@ -7,6 +7,7 @@ https://www.hackerrank.com/challenges/alternating-characters/problem?h_l=intervi
 
 Example : 
 S = AAABABB
+Output : 3 (ABAB) 7-4=3
 Remove A and B at adjacent positions. Find the minimum number of deletions done.
  */
 public class min_deletions_adjacent_characters_string {

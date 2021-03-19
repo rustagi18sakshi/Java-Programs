@@ -34,7 +34,7 @@ public class returnHighestOccuredCharacterInString {
 			}
 		}
 		Set<Character> keys = uniqueCharacter.keySet();
-		int max =-1;
+		int max = Integer.MIN_VALUE;
 		char result = ' ';
 		for(Character key : keys)
 		{

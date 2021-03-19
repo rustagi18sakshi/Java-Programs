@@ -6,7 +6,7 @@ package advanced_java_programs;
  In Euclid's algorithm, we start with two numbers X and Y. 
  If Y is zero then greatest common divisor of both will be X, but if Y is not zero then we assign the Y to X
  and Y becomes X%Y.
- */
+*/
 import java.util.Scanner;
 
 public class HCFofTwoNumbersUsingEuclidMethod {

@@ -31,7 +31,7 @@ public class allAdjacentsCharacterTogether {
 						count++;
 					}
 				}
-				for (int k = 0; k < count; k++) {
+				for (int k = 1; k <= count; k++) {
 					outputResultList.add(input.charAt(i));
 				}
 			}

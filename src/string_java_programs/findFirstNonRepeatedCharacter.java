@@ -1,6 +1,9 @@
 package string_java_programs;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -19,7 +22,7 @@ public class findFirstNonRepeatedCharacter {
 		System.out.println("Enter the string you want :");
 		String s = sc.nextLine();
 
-		HashMap<Character, Integer> uniqueCharacter = new HashMap<Character, Integer>();
+		LinkedHashMap<Character, Integer> uniqueCharacter = new LinkedHashMap<Character, Integer>();
 
 		for (int i = 0; i < s.length(); i++) {
 			Character c = s.charAt(i);
@@ -29,10 +32,11 @@ public class findFirstNonRepeatedCharacter {
 				uniqueCharacter.put(c, 1);
 			}
 		}
+		
+		Set<Character> keys = uniqueCharacter.keySet();
 
-		// since HashMap doesn't maintain order, going through string again
-		for (int i = 0; i < s.length(); i++) {
-			Character key = s.charAt(i);
+		for(Character key : keys)
+		{
 			if (uniqueCharacter.get(key) == 1) {
 				System.out.println("First non repeated character in the string is : " + key);
 				break;
