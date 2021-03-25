@@ -10,7 +10,7 @@ public class reversalOfArray {
 		System.out.println("Enter the number of elements you want in an array :");
 		int num  = sc.nextInt();
 		
-		String arr[] = new String[num];
+		String[] arr = new String[num];
 		System.out.println("Enter the elements of an array :");
 		for(int i=0;i<num;i++)
 		{
