@@ -1,8 +1,8 @@
 package advanced_java_programs;
 
 /*
-Input={12,34,45,9,8,90,3}
-Output ={12,34,8,90,45,9,3}
+Input = {12,34,45,9,8,90,3}
+Output = {12,34,8,90,45,9,3}
 */
 public class oddEvenSegregationUsingSwapping {
 

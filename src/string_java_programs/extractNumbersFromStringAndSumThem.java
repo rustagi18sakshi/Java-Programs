@@ -1,42 +1,34 @@
 package string_java_programs;
-
-//Complexity = O(N)
-//Issue : It can not take consecutive number. For eg in string "jwj34r4h7sk98" it will take numbers as:
-// " 3, 4, 4,7,9,8" and not as " 34,4,7,98"
-
-import java.util.ArrayList;
 import java.util.Scanner;
-
-import org.omg.PortableInterceptor.INACTIVE;
+/*
+Input : 2398rh824h9f
+Output : 2 3 9 8 8 2 4 9 
+Added the logic for sum as well.
+*/
 
 public class extractNumbersFromStringAndSumThem {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the string : ");
+		System.out.println("Enter the string you want having integers : ");
 		String s = sc.nextLine();
 		
-		ArrayList<Integer> arrayList = new ArrayList<Integer>();
+		String numbers = "";
 		int sum = 0;
-
-		for (int i = 0; i < s.length(); i++) {
+		
+		for(int i=0;i<s.length();i++)
+		{
 			Character c = s.charAt(i);
-			if (c == '0' || c == '1' || c == '2' || c == '3' || c == '4' || c == '5' || c == '6'
-					|| c == '7' || c == '8' || c == '9') {
-				String number = Character.toString(c);
-				int num = Integer.valueOf(number);
-				arrayList.add(num);
+			
+			if(Character.isDigit(c))
+			{
+				numbers = numbers + c + " ";
+				sum = sum + Integer.valueOf(Character.toString(c));
 			}
 		}
-		System.out.println("Total numbers in this string are :" + arrayList.size());
-		System.out.print("Numbers in this string are : ");
-		for (Integer num : arrayList) {
-			System.out.print(num + " ");
-			sum = sum + num;
-		}
-		System.out.println();
-		System.out.println("Sum of the numbers is : " + sum);
+		
+		System.out.println("The numbers obtained in the string are : "+numbers);
+		System.out.println("Sum of all the numbers obtained are : "+sum);
 	}
-
 }

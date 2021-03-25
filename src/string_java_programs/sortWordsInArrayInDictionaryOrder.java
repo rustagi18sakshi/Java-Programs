@@ -26,7 +26,7 @@ public class sortWordsInArrayInDictionaryOrder {
 		{
 			for(int j=i+1;j<num;j++)
 			{
-				if((arr[i].compareToIgnoreCase(arr[j])) > 0)
+				if((arr[i].compareToIgnoreCase(arr[j])) > 0)   // Using compareToIgnoreCase
 				{
 					String temp = arr[i];
 					arr[i] = arr[j];
