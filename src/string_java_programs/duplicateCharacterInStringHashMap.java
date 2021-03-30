@@ -35,11 +35,13 @@ public class duplicateCharacterInStringHashMap {
 
 		Set<Character> keys = uniqueCharacter.keySet();
 
-//For finding duplicate characters we need to get keys with value greater than or equal to 2		
+		//For finding duplicate characters we need to get keys with value greater than or equal to 2		
 		System.out.println("Duplicate characters with their no. of occurance are : ");
-		for (Character c : keys) {
+		
+		for (Character c : keys) 
+		{
 			if (uniqueCharacter.get(c) >= 2) {
-				System.out.println(c + "           " + uniqueCharacter.get(c));
+				System.out.println(c + " : " + uniqueCharacter.get(c));
 			}
 		}
 	}

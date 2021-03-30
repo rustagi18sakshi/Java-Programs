@@ -9,7 +9,7 @@ For example, if the input is "Java is Great" and asked to replace space with %20
 public class replaceOneCharacterWithAnother {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the string you want :");
 		String s = sc.nextLine();

@@ -9,19 +9,19 @@ import java.util.Scanner;
 public class selectionSort {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the number of elements you want in an array :");
 		int num = sc.nextInt();
 		
-		int arr[] = new int[num];
+		int[] arr = new int[num];
 		System.out.println("Enter the elements of an array :");
 		for(int i=0;i<num;i++)
 		{
 			arr[i] = sc.nextInt();
 		}
 		
-		int sortedArray[] = selectionSort(arr);
+		int[] sortedArray = selectionSort(arr);
 		
 		System.out.println("Sorted array is : ");
 		for(int j=0;j<sortedArray.length;j++)

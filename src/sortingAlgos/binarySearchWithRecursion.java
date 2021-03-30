@@ -12,6 +12,7 @@ public class binarySearchWithRecursion {
 		int num = sc.nextInt();
 				
 		int arr[] = new int[num];
+		
 		System.out.println("Enter the elements of an array in a sorted order :");
 		for(int i=0;i<num;i++)
 		{
@@ -19,10 +20,11 @@ public class binarySearchWithRecursion {
 		}
 		//back up if user doesn't enter sorted array
 		Arrays.sort(arr);	
+		
 		System.out.println("Enter the number you want to search in an array :");
 		int number = sc.nextInt();
 				
-		int index = binarySearch(arr, number,0, arr.length-1);
+		int index = binarySearch(arr, number, 0, arr.length-1);
 		if(index == -1)
 		{
 			System.out.println("Number "+number+" doesn't exists in an array");
@@ -33,7 +35,7 @@ public class binarySearchWithRecursion {
 		}
 	}
 
-	public static int binarySearch(int[] arr, int number,int low, int high)
+	public static int binarySearch(int[] arr, int number, int low, int high)
 	{
 		if(high>=low)
 		{

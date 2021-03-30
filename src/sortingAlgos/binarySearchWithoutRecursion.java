@@ -11,12 +11,13 @@ If you have to sort the input then you need to add that time on the total run ti
 public class binarySearchWithoutRecursion {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the number of elements you want in an array :");
 		int num = sc.nextInt();
 		
 		int arr[] = new int[num];
+		
 		System.out.println("Enter the elements of an array in a sorted order :");
 		for(int i=0;i<num;i++)
 		{

@@ -6,8 +6,7 @@ import java.util.Scanner;
 /*
  You need to remove duplicate characters from a given string keeping only the first occurrences.
  For example, if the input is ‘bananas’ the output will be ‘bans’
-
- */
+*/
 public class removeDuplicateCharactersFromString {
 
 	public static void main(String[] args) {

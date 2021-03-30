@@ -4,7 +4,8 @@ import java.util.HashMap;
 import java.util.Set;
 /*
 In this program, we need to find the smallest and the largest word present in the string.
- */
+Other way : sort array on the basis of length and get first and last word.
+*/
 public class findLargestAndSmallestWordInString {
 
 	public static void main(String[] args) {

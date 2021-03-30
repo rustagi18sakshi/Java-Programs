@@ -5,24 +5,25 @@ For explanation of bubble sort : https://www.geeksforgeeks.org/bubble-sort/
 For coding refer link : https://www.javatpoint.com/bubble-sort-in-java
 Complexity of bubble sort is 0(n^2)
 */
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class bubbleSort {
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the number of elements you want in an array :");
 		int num = sc.nextInt();
 		
-		int arr[] = new int[num];
+		int[] arr = new int[num];
 		System.out.println("Enter the elements of an array :");
 		for(int i=0;i<num;i++)
 		{
 			arr[i] = sc.nextInt();
 		}
 		
-		int sortedArray[] = bubbleSort(arr);
+		int[] sortedArray = bubbleSort(arr);
 		
 		System.out.println("Sorted array is : ");
 		for(int j=0;j<sortedArray.length;j++)
@@ -31,7 +32,7 @@ public class bubbleSort {
 		}	
 	}
 // In bubble sort, maximum number is sorted first in the array at the end of the list
-	public static int[] bubbleSort(int arr[])
+	public static int[] bubbleSort(int[] arr)
 	{
 		int len = arr.length;
 		for(int i=0;i<len;i++)

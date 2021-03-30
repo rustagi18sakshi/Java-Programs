@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class swapTwoStringWithoutUsingThirdVariable {
 
 	public static void main(String[] args) {
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the first string : ");
 		//e.g good
@@ -23,8 +24,7 @@ public class swapTwoStringWithoutUsingThirdVariable {
 		//morning
 		str1 = str1.substring(str2.length());
 		
-		System.out.println("String after swapping : "+str1+" "+str2);
-		
+		System.out.println("String after swapping : "+str1+" "+str2);		
 
 	}
 
