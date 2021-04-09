@@ -22,6 +22,29 @@ public class duplicateCharacterInStringHashMap {
 		System.out.println("Enter the string you want :");
 		String s = sc.nextLine();
 
+		printDuplicateCharacters(s);
+	}
+	
+	public static void printDuplicateCharacters(String s)
+	{
+		if(s == null)
+		{
+			System.out.println("NULL String");
+			return;
+		}
+		
+		if(s.isEmpty())
+		{
+			System.out.println("Empty string");
+			return;
+		}
+		
+		if(s.length()==1)
+		{
+			System.out.println("Single character string, so no duplicates");
+			return;
+		}
+
 		HashMap<Character, Integer> uniqueCharacter = new HashMap<Character, Integer>();
 
 		for (int i = 0; i < s.length(); i++) {
@@ -38,10 +61,10 @@ public class duplicateCharacterInStringHashMap {
 		//For finding duplicate characters we need to get keys with value greater than or equal to 2		
 		System.out.println("Duplicate characters with their no. of occurance are : ");
 		
-		for (Character c : keys) 
+		for (Character key : keys) 
 		{
-			if (uniqueCharacter.get(c) >= 2) {
-				System.out.println(c + " : " + uniqueCharacter.get(c));
+			if (uniqueCharacter.get(key) >= 2) {
+				System.out.println(key + " : " + uniqueCharacter.get(key));
 			}
 		}
 	}

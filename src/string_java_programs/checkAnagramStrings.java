@@ -11,7 +11,9 @@ For example, the Army and Mary are an anagram of each other.
 public class checkAnagramStrings {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		
+		System.out.println("\"([^\"]*)\"|(\\S*");
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter first string :");
 		String s1 = sc.nextLine();

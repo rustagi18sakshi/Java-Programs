@@ -33,17 +33,17 @@ public class longest_palindrome_in_a_string {
 		}
 		//Start with one character as a longest palindrome
 		String longest = s.substring(0,1);
-		for(int i=0;i<s.length();i++)
+		for(int i=0; i<s.length(); i++)
 		{
 			//get longest palindrome for odd length(center is i)
 			String tmp = checkForEquality(s, i, i);
-			if(tmp.length()>longest.length())
+			if(tmp.length() > longest.length())
 			{
 				longest=tmp;
 			}
 			//get longest palindrome for even length(center is i, i+1)
 			tmp = checkForEquality(s, i, i+1);
-			if(tmp.length()>longest.length())
+			if(tmp.length() > longest.length())
 			{
 				longest=tmp;
 			}

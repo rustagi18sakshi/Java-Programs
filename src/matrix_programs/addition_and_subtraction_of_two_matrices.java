@@ -1,11 +1,11 @@
-package advanced_java_programs;
+package matrix_programs;
 
 import java.util.Scanner;
 
 public class addition_and_subtraction_of_two_matrices {
 
 	public static void main(String[] args) {
-			// TODO Auto-generated method stub
+
 			Scanner sc = new Scanner(System.in);
 			System.out.println("Enter the total number of rows :");
 			int row = sc.nextInt();

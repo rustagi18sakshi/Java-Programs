@@ -1,4 +1,4 @@
-package advanced_java_programs;
+package matrix_programs;
 
 /*
 Link to refer : https://www.programmingsimplified.com/java/source-code/java-program-multiply-two-matrices
@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class multiplication_of_two_matrices {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the total number of rows for first matrix :");
 		int row1 = sc.nextInt();
@@ -37,6 +37,7 @@ public class multiplication_of_two_matrices {
 		//Matrix formed by multiplication will have:
 		//rows = no. of rows of matrix 1, columns = no.of columns of matrix2
 		int[][] multiplicationMatrix = new int[row1][col2];
+		
 		int sum=0;
 		
 		if(col1!=row2)
@@ -62,6 +63,7 @@ public class multiplication_of_two_matrices {
 		System.out.println("Multiplication matrix is :");
 		displayMatrix(multiplicationMatrix);
 	}
+	
 	//function for taking input matrix from user
 	public static int[][] readInput(Scanner sc, int row, int col)
 	{
@@ -76,6 +78,7 @@ public class multiplication_of_two_matrices {
 		}
 		return matrix;
 	}
+	
 	//function for displaying matrix content
 	public static void displayMatrix(int matrix[][])
 	{

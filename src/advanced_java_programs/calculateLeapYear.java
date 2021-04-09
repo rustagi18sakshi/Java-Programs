@@ -18,6 +18,7 @@ public class calculateLeapYear {
 		int year = sc.nextInt();
 		
 		boolean status = false;
+		
 		if(year%4==0)
 		{
 			if(year%100==0)

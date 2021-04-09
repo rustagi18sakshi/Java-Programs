@@ -27,6 +27,7 @@ public class maxSumOfTwoConsecutiveNumbersInArray {
 		int[] sumArray = new int[num-1];
 		
 		System.out.println("Sum of consecutive numbers are :");
+		
 		for(int i=0; i<num-1; i++)
 		{
 			int sum = arr[i] + arr[i+1];

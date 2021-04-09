@@ -14,7 +14,7 @@ For example if input is "aaaaaaaaaaaaaaaaabbbbcddddeeeeee" it should return "a".
 public class returnHighestOccuredCharacterInString {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the string you want :");
 		String s = sc.nextLine();
@@ -33,12 +33,14 @@ public class returnHighestOccuredCharacterInString {
 				uniqueCharacter.put(c, 1);
 			}
 		}
+		
 		Set<Character> keys = uniqueCharacter.keySet();
+		
 		int max = Integer.MIN_VALUE;
 		char result = ' ';
 		for(Character key : keys)
 		{
-			if(uniqueCharacter.get(key)>max)
+			if(uniqueCharacter.get(key) > max)
 			{
 				max = uniqueCharacter.get(key);
 				result = key;
@@ -48,5 +50,4 @@ public class returnHighestOccuredCharacterInString {
 		System.out.println("Total number of occurance of highest occured string is : "+max);
 		
 	}
-
 }
