@@ -5,11 +5,13 @@ import java.util.Scanner;
 public class determineOneStringIsRotationOfOther {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("Enter the first string : ");
 		String str1 = sc.nextLine();						//e.g. abcde
+		
 		System.out.println("Enter the second string : ");
 		String str2 = sc.nextLine();						//e.g. cdeab
 		
@@ -20,6 +22,7 @@ public class determineOneStringIsRotationOfOther {
 		else
 		{
 			str1 = str1.concat(str1);
+			
 			if(str1.contains(str2))
 			{
 				System.out.println("Second string is a rotation of first string");

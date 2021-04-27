@@ -6,32 +6,40 @@ public class convertRomanNumberalToDecimals {
 
 		String romanNumeral = "DMCIX";
 
-		int length = romanNumeral.length();
+		int len = romanNumeral.length();
 		int sum = 0;
 
-		for (int i = 0; i < length - 1; i++) {
+		for(int i=0; i<len; i++) 
+		{
 			int s1 = value(romanNumeral.charAt(i));
-			int s2 = value(romanNumeral.charAt(i + 1));
-
-			if (s1 < s2) {
-				sum = sum - s1 + s2;
-				i++;
-			} else {
+			
+			if(i+1 < len)
+			{
+				int s2 = value(romanNumeral.charAt(i + 1));
+				
+				if(s1 < s2) 
+				{
+					sum = sum - s1 + s2;
+					i++;
+				} 
+				else 
+				{
+					sum = sum + s1;
+				}
+			}
+			else
+			{
 				sum = sum + s1;
 			}
 		}
 
-		int lastDigit = value(romanNumeral.charAt(length - 1));
-		int secondLastDigit = value(romanNumeral.charAt(length - 2));
-
-		if (lastDigit <= secondLastDigit) {
-			sum = sum + lastDigit;
-		}
 		System.out.println("Converted decimal number is : " + sum);
 	}
 
-	public static int value(Character c) {
+	public static int value(Character c) 
+	{
 		int output = 0;
+		
 		if (c == 'I') {
 			output = 1;
 		} else if (c == 'V') {

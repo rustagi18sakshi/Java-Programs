@@ -12,25 +12,27 @@ ACDABC is interleaving of ABC & ACD
 public class checkIfSringIsInterleavingOfTwoStrings {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	Scanner sc = new Scanner(System.in);
-	System.out.println("Enter first string :");
-	String X = sc.nextLine();
-	System.out.println("Enter second string :");
-	String Y = sc.nextLine();
-	System.out.println("Enter interleaved string :");
-	String S = sc.nextLine();
-	
-	boolean status = checkInterleaving(X, Y, S);
-	if(status == true)
-	{
-		System.out.println("Given string is an interleaving of First and second string");
-	}else
-	{
-		System.out.println("Given string is not an interleaving of first and second string");
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter first string :");
+		String X = sc.nextLine();
+		System.out.println("Enter second string :");
+		String Y = sc.nextLine();
+		System.out.println("Enter interleaved string :");
+		String S = sc.nextLine();
+		
+		boolean status = checkInterleaving(X, Y, S);
+		if(status == true)
+		{
+			System.out.println("Given string is an interleaving of First and second string");
+		}
+		else
+		{
+			System.out.println("Given string is not an interleaving of first and second string");
+		}
 	}
-	}
-	
+		
 	public static boolean checkInterleaving(String X, String Y, String S)
 	{
 		

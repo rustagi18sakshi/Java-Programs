@@ -11,14 +11,13 @@ https://netjs.blogspot.com/2016/05/how-to-find-longest-palindrome-in-given-strin
 public class longest_palindrome_in_a_string {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Scanner sc= new Scanner(System.in);
 		System.out.println("Enter the desired string:");
 		String s= sc.nextLine();
 		
 		String longestPalindrome = findLongestPalindromeString(s);
 		System.out.println("Longest palindrome in the string is : "+longestPalindrome);
-
 	}
 
 	public static String findLongestPalindromeString(String s) {

@@ -6,8 +6,9 @@ https://www.hackerrank.com/challenges/2d-array/problem?h_l=interview&playlist_sl
 public class Array_hourglass {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Scanner sc= new Scanner(System.in);
+		
 		int[][] arr = new int[6][6];
 		for(int i=0;i<6;i++)
 		{

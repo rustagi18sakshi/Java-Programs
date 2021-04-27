@@ -15,15 +15,17 @@ public class findFirstNonRepeatedCharacter {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("Enter the string you want :");
 		String s = sc.nextLine();
 
 		HashMap<Character, Integer> uniqueCharacter = new HashMap<Character, Integer>();
 
-		for (int i = 0; i < s.length(); i++) {
+		for(int i=0; i<s.length(); i++) 
+		{
 			Character c = s.charAt(i);
 			
-			if (uniqueCharacter.containsKey(c))
+			if(uniqueCharacter.containsKey(c))
 			{
 				uniqueCharacter.put(c, uniqueCharacter.get(c) + 1);
 			} 
@@ -33,7 +35,7 @@ public class findFirstNonRepeatedCharacter {
 			}
 		}
 		
-		for(int i=0;i<s.length();i++)
+		for(int i=0; i<s.length(); i++)
 		{
 			if(uniqueCharacter.get(s.charAt(i)) == 1)
 			{

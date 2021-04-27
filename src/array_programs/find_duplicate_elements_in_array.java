@@ -14,9 +14,9 @@ public class find_duplicate_elements_in_array {
 		System.out.println("**** Brute Force ****");
 		
 		HashSet<String> uniqueDuplicate = new HashSet<String>();
-		for(int i = 0; i<originalArray.length; i++)
+		for(int i=0; i<originalArray.length; i++)
 		{
-			for(int j = i+1; j<originalArray.length; j++)
+			for(int j=i+1; j<originalArray.length; j++)
 			{
 				if(originalArray[i].equals(originalArray[j]))
 				{
@@ -32,7 +32,8 @@ public class find_duplicate_elements_in_array {
 		
 		HashSet<String> uniqueDuplicates = new HashSet<String>();
 		HashSet<String> uniqueElements = new HashSet<String>();
-		for(int i = 0; i<originalArray.length; i++)
+		
+		for(int i=0; i<originalArray.length; i++)
 		{
 			if(uniqueElements.add(originalArray[i])==false)
 			{
@@ -45,6 +46,7 @@ public class find_duplicate_elements_in_array {
 		System.out.println("**** Using Hashmap ****");
 		
 		HashMap<String, Integer> hashmap = new HashMap<String, Integer>();
+		
 		for(int i = 0; i<originalArray.length; i++)
 		{
 			String s = originalArray[i];
@@ -58,9 +60,10 @@ public class find_duplicate_elements_in_array {
 			}
 		}
 		Set<String> keys = hashmap.keySet();
+		
 		for(String key : keys)
 		{
-			if(hashmap.get(key)>1)
+			if(hashmap.get(key) > 1)
 			{
 				System.out.println(key+" ");
 			}

@@ -22,9 +22,9 @@ public class sortWordsInArrayInDictionaryOrder {
 			arr[i] = sc.next();
 		}
 
-		for(int i=0;i<num-1;i++)
+		for(int i=0; i<num-1; i++)
 		{
-			for(int j=i+1;j<num;j++)
+			for(int j=i+1; j<num; j++)
 			{
 				if((arr[i].compareToIgnoreCase(arr[j])) > 0)   // Using compareToIgnoreCase
 				{
@@ -36,7 +36,8 @@ public class sortWordsInArrayInDictionaryOrder {
 		}
 		
 		System.out.println("Sorted array on the basis of words in dictiorary is : ");
-		for (int i = 0; i < num; i++) {
+		for (int i = 0; i < num; i++) 
+		{
 			System.out.print(arr[i] + " ");
 		}
 	}

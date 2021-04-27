@@ -13,6 +13,7 @@ public class findFirstRepeatedCharacterInString {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("Enter the string you want :");
 		String s = sc.nextLine();
 
@@ -20,7 +21,7 @@ public class findFirstRepeatedCharacterInString {
 		
 		HashMap<Character, Integer> uniqueCharacter = new HashMap<Character, Integer>();
 		
-		for(int i=0;i<len;i++)
+		for(int i=0; i<len; i++)
 		{
 			Character c = s.toLowerCase().charAt(i);
 			
@@ -34,7 +35,7 @@ public class findFirstRepeatedCharacterInString {
 			}
 		}
 
-		for(int i=0;i<len;i++)
+		for(int i=0; i<len; i++)
 		{
 			if(uniqueCharacter.get(s.toLowerCase().charAt(i)) > 1)
 			{

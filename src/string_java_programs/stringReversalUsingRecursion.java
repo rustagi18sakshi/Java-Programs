@@ -22,14 +22,15 @@ public class stringReversalUsingRecursion {
 
 		String reverse = reverseString(s);
 		System.out.println("Reverse string is :" + reverse);
-
 	}
 
-	public static String reverseString(String str) {
-		if (str.isEmpty()) {
+	public static String reverseString(String str) 
+	{
+		if (str.isEmpty()) 
+		{
 			return str;
 		}
+		
 		return reverseString(str.substring(1)) + str.charAt(0);
 	}
-
 }

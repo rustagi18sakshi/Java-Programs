@@ -2,11 +2,10 @@ package advanced_java_programs;
 
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-/* FOr eg. Input : 9891795995
+/* For e.g. Input : 98917959956
    Output : 
    Number  Occurence
    9		5
@@ -14,6 +13,7 @@ import java.util.Set;
    1		1
    7		1
    5		2
+   6        1
  */
 public class RepeatedNumberAndTheirOccurenceInPhoneNumber {
 
@@ -21,11 +21,11 @@ public class RepeatedNumberAndTheirOccurenceInPhoneNumber {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a phone number");
-		int num = sc.nextInt();
+		Long num = sc.nextLong();
 
-		HashMap<Integer, Integer> phoneNumberUnique = new HashMap<Integer, Integer>();
+		HashMap<Long, Integer> phoneNumberUnique = new HashMap<Long, Integer>();
 		while (num > 0) {
-			int rem = num % 10;
+			long rem = num % 10;
 
 			if (phoneNumberUnique.containsKey(rem)) {
 				phoneNumberUnique.put(rem, (phoneNumberUnique.get(rem) + 1));
@@ -35,11 +35,11 @@ public class RepeatedNumberAndTheirOccurenceInPhoneNumber {
 			num = num / 10;
 		}
 
-		Set<Integer> keys = phoneNumberUnique.keySet();
+		Set<Long> keys = phoneNumberUnique.keySet();
 
 		System.out.println("Number      Occurence");
 
-		for (Integer key : keys) {
+		for (Long key : keys) {
 			System.out.println(key + "           " + phoneNumberUnique.get(key));
 		}
 	}

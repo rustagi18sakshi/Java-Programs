@@ -6,7 +6,7 @@ import java.util.Scanner;
 Enter the string you want : 
 ksd54#$2l23e32
 Reverse string is : eld54#$2s23k32
- */
+*/
 
 public class reversingStringWithoutReversingSpecialCharacterOrNumbers {
 

@@ -12,31 +12,44 @@ public class checkAnagramStrings {
 
 	public static void main(String[] args) {
 
-		
-		System.out.println("\"([^\"]*)\"|(\\S*");
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("Enter first string :");
 		String s1 = sc.nextLine();
+		
 		System.out.println("Enter second string :");
 		String s2 = sc.nextLine();
 
+		boolean status = checkAnagrams(s1, s2);
+		if (status == true) 
+		{
+			System.out.println(s1 + " and " + s2 + " are anagrams");
+		} 
+		else 
+		{
+			System.out.println(s1 + " and " + s2 + " are not anagrams");
+		}
+	}
+	
+	public static boolean checkAnagrams(String s1, String s2)
+	{
 		boolean status = false;
-		if (s1.length() != s2.length()) {
+		
+		if(s1.length() != s2.length()) 
+		{
 			status = false;
-		} else {
+		} 
+		else 
+		{
 			char[] arr1 = s1.toLowerCase().toCharArray();
 			char[] arr2 = s2.toLowerCase().toCharArray();
 
 			Arrays.sort(arr1);
 			Arrays.sort(arr2);
+			
 			status = Arrays.equals(arr1, arr2);
 		}
-
-		if (status == true) {
-			System.out.println(s1 + " and " + s2 + " are anagrams");
-		} else {
-			System.out.println(s1 + " and " + s2 + " are not anagrams");
-		}
+		
+		return status;
 	}
-
 }

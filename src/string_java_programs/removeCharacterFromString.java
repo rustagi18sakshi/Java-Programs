@@ -8,7 +8,7 @@ which doesn't has that character e.g remove(String word, char ch).
 public class removeCharacterFromString {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the string you want :");
 		String s = sc.nextLine();
@@ -18,11 +18,12 @@ public class removeCharacterFromString {
 		
 		//Through normal way
 		String s1 ="";
-		for(int i=0;i<s.length();i++)
+		
+		for(int i=0; i<s.length(); i++)
 		{
 			if(s.charAt(i)!=c)
 			{
-				s1 = s1+s.charAt(i);
+				s1 = s1 + s.charAt(i);
 			}
 		}
 		
@@ -33,10 +34,12 @@ public class removeCharacterFromString {
 		System.out.println("Using recursion, string with character "+c+" removed from the string is : "+s2);
 		
 	}
+	
 	public static String removeCharacter(String s, char c)
 	{
 		int index = s.indexOf(c);
-		if(index ==-1)
+		
+		if(index == -1)
 		{
 			return s;
 		}

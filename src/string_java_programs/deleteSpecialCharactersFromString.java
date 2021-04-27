@@ -13,19 +13,19 @@ public class deleteSpecialCharactersFromString {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("Enter the string you want having special characters : ");
 		String s = sc.nextLine();
 		
-		char[] c = s.toCharArray();
-		int length = c.length;
 		String newString = "";
 		
-		
-		for(int i=0;i<length;i++)
+		for(int i=0; i<s.length(); i++)
 		{
-			if(Character.isAlphabetic(c[i]) || Character.isDigit(c[i]))
+			Character c = s.charAt(i);
+			
+			if(Character.isAlphabetic(c) || Character.isDigit(c))
 			{
-				newString = newString + c[i];
+				newString = newString + c;
 			}
 		}
 		

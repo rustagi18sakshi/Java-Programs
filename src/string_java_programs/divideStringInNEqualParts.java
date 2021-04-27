@@ -10,8 +10,10 @@ public class divideStringInNEqualParts {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("Enter the string you want :");
 		String s = sc.nextLine();
+		
 		System.out.println("Enter the value of how many parts you want to divide : ");
 		int n = sc.nextInt();
 		
@@ -28,8 +30,10 @@ public class divideStringInNEqualParts {
 			//then we have to increment char by 4
 			int div = len/n;
 			int temp = 0;
+			
 			String[] arr = new String[n];
-			for(int i=0;i<len-1;i=i+div)
+			
+			for(int i=0; i<len; i=i+div)
 			{
 				String s1 = s.substring(i,i+div); 
 				arr[temp]= s1;
@@ -37,12 +41,11 @@ public class divideStringInNEqualParts {
 			}
 			
 			System.out.println("Equal parts of the string are : ");
-			for(int i=0;i<temp;i++)
+			
+			for(int i=0; i<temp; i++)
 			{
 				System.out.println(arr[i]);
 			}
 		}
-
 	}
-
 }

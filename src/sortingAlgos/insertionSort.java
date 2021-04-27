@@ -34,7 +34,7 @@ public class insertionSort {
 	public static int[] insertionSort(int[] arr)
 	{
 		int length = arr.length;
-		for(int i=1;i<length;i++)
+		for(int i=1; i<length; i++)
 		{
 			int key = arr[i];
 			int j=i-1;

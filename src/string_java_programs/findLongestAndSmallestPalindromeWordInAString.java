@@ -19,7 +19,7 @@ public class findLongestAndSmallestPalindromeWordInAString {
 		String longest = "";
 		String smallest = "";
 		
-		for(int i=0;i<arr.length;i++)
+		for(int i=0; i<arr.length; i++)
 		{
 			String str = arr[i];
 			int length = str.length();
@@ -27,12 +27,12 @@ public class findLongestAndSmallestPalindromeWordInAString {
 
 			if(status == true)
 			{
-				if(length>maxLength)
+				if(length > maxLength)
 				{
 					maxLength = length;
 					longest = str;
 				}
-				if(length<minLength)
+				if(length < minLength)
 				{
 					minLength = length;
 					smallest = str;
@@ -47,9 +47,11 @@ public class findLongestAndSmallestPalindromeWordInAString {
 	public static boolean isPalindrome(String s)
 	{
 		boolean status = false;
+		
 		String original = s;
 		String reverse = "";
-		for(int i=original.length()-1;i>=0;i--)
+		
+		for(int i=original.length()-1; i>=0; i--)
 		{
 			reverse = reverse + s.charAt(i);
 		}

@@ -12,6 +12,7 @@ public class findMostRepeatedWordInTextFile {
 		
 		String projectPath = System.getProperty("user.dir");
 		System.out.println("Project path is : "+projectPath);
+		
 		FileReader file = new FileReader(projectPath+"/src/string_java_programs/file.txt");
 		BufferedReader br = new BufferedReader(file);
 		
@@ -22,6 +23,7 @@ public class findMostRepeatedWordInTextFile {
 		{
 			//Splitting the line obtained by space and storing the words in a string array
 			String[] str = line.toLowerCase().split(" ");
+			
 			for(String s : str)
 			{
 				list.add(s);
@@ -32,9 +34,9 @@ public class findMostRepeatedWordInTextFile {
 		int length = list.size();
 		String maxCharacter = "";
 		
-		for(int i=0;i<length;i++)
+		for(int i=0; i<length; i++)
 		{
-			int count =1;
+			int count = 1;
 			for(int j=i+1;j<length;j++)
 			{
 				if(list.get(i).equals(list.get(j)))
@@ -43,7 +45,7 @@ public class findMostRepeatedWordInTextFile {
 				}
 			}
 			
-			if(count>maxCount)
+			if(count > maxCount)
 			{
 				maxCount = count;
 				maxCharacter = list.get(i);			

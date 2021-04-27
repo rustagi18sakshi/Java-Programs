@@ -1,6 +1,4 @@
 package string_java_programs;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Set;
@@ -16,9 +14,9 @@ Read more: https://javarevisited.blogspot.com/2015/01/top-20-string-coding-inter
 public class duplicateCharacterInStringHashMap {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		Scanner sc = new Scanner(System.in);
+		
 		System.out.println("Enter the string you want :");
 		String s = sc.nextLine();
 
@@ -47,11 +45,16 @@ public class duplicateCharacterInStringHashMap {
 
 		HashMap<Character, Integer> uniqueCharacter = new HashMap<Character, Integer>();
 
-		for (int i = 0; i < s.length(); i++) {
+		for (int i = 0; i < s.length(); i++)
+		{
 			Character c = s.charAt(i);
-			if (uniqueCharacter.containsKey(c)) {
-				uniqueCharacter.put(c, uniqueCharacter.get(c) + 1);
-			} else {
+			
+			if(uniqueCharacter.containsKey(c)) 
+			{
+				uniqueCharacter.put(c, uniqueCharacter.get(c)+1);
+			} 
+			else 
+			{
 				uniqueCharacter.put(c, 1);
 			}
 		}
@@ -63,7 +66,8 @@ public class duplicateCharacterInStringHashMap {
 		
 		for (Character key : keys) 
 		{
-			if (uniqueCharacter.get(key) >= 2) {
+			if (uniqueCharacter.get(key) > 1) 
+			{
 				System.out.println(key + " : " + uniqueCharacter.get(key));
 			}
 		}

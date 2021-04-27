@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class removeDuplicateCharactersFromString {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the string you want :");
 		String s = sc.nextLine();
@@ -18,14 +18,16 @@ public class removeDuplicateCharactersFromString {
 		HashSet<Character> nonRepeatedCharacters = new HashSet<Character>();
 		String nonDuplicateString = "";
 
-		for (int i = 0; i < s.length(); i++) {
-			boolean status = false;
-			status = nonRepeatedCharacters.add(s.charAt(i));
+		for (int i = 0; i < s.length(); i++) 
+		{
+			boolean status = nonRepeatedCharacters.add(s.charAt(i));
 
-			if (status == true) {
+			if (status == true) 
+			{
 				nonDuplicateString = nonDuplicateString + s.charAt(i);
 			}
 		}
+		
 		System.out.println("String without duplicates is : " + nonDuplicateString);
 	}
 }
