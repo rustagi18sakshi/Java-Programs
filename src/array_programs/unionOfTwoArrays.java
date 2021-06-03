@@ -92,11 +92,9 @@ public class unionOfTwoArrays {
 	    	}
 	    }
 	    
-	    Set<Integer> keys = hash.keySet();
-	    
 	    System.out.println("Union of two arrays using hashmap is : ");  
 
-	    for(Integer key : keys)
+	    for(Integer key : hash.keySet())
 	    {
 	    	System.out.print(key+" ");
 	    }

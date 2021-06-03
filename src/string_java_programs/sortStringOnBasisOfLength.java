@@ -19,6 +19,7 @@ public class sortStringOnBasisOfLength {
 		String[] arr = new String[num];
 		
 		System.out.println("Enter all the strings : ");
+		
 		for(int i=0;i<num;i++)
 		{	
 			arr[i] = sc.next();

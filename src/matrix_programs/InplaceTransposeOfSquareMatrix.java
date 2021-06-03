@@ -31,8 +31,7 @@ public class InplaceTransposeOfSquareMatrix {
 		displayMatrix(matrix);
 
 		// Using j=i+1 since suppose in 3*3 matrix
-		// matrix[0][1] will be exchanged with matrix[1][0]. So if we start with i=1, j=,
-		// then 
+		// matrix[0][1] will be exchanged with matrix[1][0].
 		for(int i=0; i<row; i++)
 		{
 			for(int j=i+1; j<col; j++)

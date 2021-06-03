@@ -22,7 +22,7 @@ public class Array_LeftRotation {
 		int[] rotatedArr = rotatedArray(arr, rot);
 		
 		System.out.println("Rotated array is : ");
-		for(int i =0;i<rotatedArr.length;i++)
+		for(int i =0; i<rotatedArr.length; i++)
 		{
 			System.out.print(rotatedArr[i]+" ");
 		}

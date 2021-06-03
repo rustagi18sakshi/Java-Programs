@@ -64,27 +64,27 @@ public class checkForBalancedExpressions {
 			
 			switch(c)
 			{
-			case ')':
-				check = stack.pop();
-				if(check=='{' || check=='[')
-				{
-					return false;
-				}
-				break;
-			case '}':
-				check = stack.pop();
-				if(check=='(' || check=='[')
-				{
-					return false;
-				}
-				break;
-			case ']':
-				check = stack.pop();
-				if(check=='(' || check=='{')
-				{
-					return false;
-				}
-				break;
+				case ')':
+					check = stack.pop();
+					if(check=='{' || check=='[')
+					{
+						return false;
+					}
+					break;
+				case '}':
+					check = stack.pop();
+					if(check=='(' || check=='[')
+					{
+						return false;
+					}
+					break;
+				case ']':
+					check = stack.pop();
+					if(check=='(' || check=='{')
+					{
+						return false;
+					}
+					break;
 			}
 		}
 

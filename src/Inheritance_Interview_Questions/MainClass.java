@@ -36,7 +36,7 @@ public class MainClass {
 
 		// This will call super method in A class and 2nd method in C class(which has
 		// arguement String)
-		A obj7 = new C("Abhinav");
+		A obj7 = new C("Sakshi");
 
 	}
 

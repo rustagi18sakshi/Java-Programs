@@ -59,9 +59,8 @@ public class find_duplicate_elements_in_array {
 				hashmap.put(s, 1);
 			}
 		}
-		Set<String> keys = hashmap.keySet();
-		
-		for(String key : keys)
+
+		for(String key : hashmap.keySet())
 		{
 			if(hashmap.get(key) > 1)
 			{

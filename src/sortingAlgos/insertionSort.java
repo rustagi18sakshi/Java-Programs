@@ -16,32 +16,35 @@ public class insertionSort {
 		int num = sc.nextInt();
 		
 		int arr[] = new int[num];
+		
 		System.out.println("Enter the elements of an array :");
-		for(int i=0;i<num;i++)
+		for(int i=0; i<num; i++)
 		{
 			arr[i] = sc.nextInt();
 		}
 		
-		int sortedArray[] = insertionSort(arr);
+		int sortedArray[] = insertionSortFunc(arr);
 		
 		System.out.println("Sorted array is : ");
-		for(int j=0;j<sortedArray.length;j++)
+		
+		for(int j=0; j<sortedArray.length; j++)
 		{
 			System.out.print(sortedArray[j]+" ");
 		}
 	}
 	
-	public static int[] insertionSort(int[] arr)
+	public static int[] insertionSortFunc(int[] arr)
 	{
 		int length = arr.length;
+		
 		for(int i=1; i<length; i++)
 		{
 			int key = arr[i];
-			int j=i-1;
+			int j = i-1;
 			
 			while(j>=0 && arr[j]>key)
 			{
-				arr[j+1] = arr[j]; // Right rotation of element
+				arr[j+1] = arr[j];    // Right rotation of element
 				j = j-1;
 			}
 			arr[j+1] = key;
@@ -81,5 +84,5 @@ Array : 12,11,13,5,6
 	j = 0. arr[j]=5. Came out of while loop since key(6)>5 . 
 	arr[j+1]=arr[1] = key =6
 	Array : 5,6,11,12,13
- */
+*/
 

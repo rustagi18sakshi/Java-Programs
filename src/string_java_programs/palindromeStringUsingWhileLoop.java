@@ -22,7 +22,7 @@ public class palindromeStringUsingWhileLoop {
 		
 		while(l<r)
 		{
-			if(s.charAt(l)==s.charAt(r))
+			if(s.charAt(l) == s.charAt(r))
 			{
 				l++;
 				r--;

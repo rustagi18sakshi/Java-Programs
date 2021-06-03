@@ -2,6 +2,7 @@ package array_programs;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 /*
 Input arrays : {0,2,4,6,8}, {1,3,10,4,7,8,9}
 Output array : 4,8
@@ -31,7 +32,7 @@ public class intersectionOfTwoArrays {
 	// Using function addAll and retainAll of Collections.
 	public static void intersectionUsingSet(Integer[] firstArray, Integer[] secondArray)
 	{
-	    HashSet<Integer> set = new HashSet<Integer>();
+	    LinkedHashSet<Integer> set = new LinkedHashSet<Integer>();
 	    
 	    set.addAll(Arrays.asList(firstArray));
 	    
